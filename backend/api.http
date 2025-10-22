@@ -4,6 +4,10 @@ Content-Type: application/json
 
 ###
 
+### Get Note by id
+GET http://localhost:5001/api/notes/68f8a3e2f38f42f1e3f03cb2
+Content-Type: application/json
+
 ### Create a new note
 POST http://localhost:5001/api/notes
 Content-Type: application/json
@@ -16,7 +20,7 @@ Content-Type: application/json
 ###
 
 ### Update a note (replace :id with a real note ID)
-PUT http://localhost:5001/api/notes/:id
+PUT http://localhost:5001/api/notes/68f8a3e2f38f42f1e3f03cb2
 Content-Type: application/json
 
 {
@@ -27,5 +31,11 @@ Content-Type: application/json
 ###
 
 ### Delete a note (replace :id with a real note ID)
-DELETE http://localhost:5001/api/notes/:id
+DELETE http://localhost:5001/api/notes/68f89dca18e905804a5e7b79
+Content-Type: application/json
+
+###
+
+### Delete all notes
+DELETE http://localhost:5001/api/notes
 Content-Type: application/json
