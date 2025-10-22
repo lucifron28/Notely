@@ -1,0 +1,55 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Coverage
+coverage/
+
+# MongoDB data
+/data/db/
+
+# Misc
+*.log
+*.sqlite
+*.bak
+*.tmp
+
+# React build
+frontend/build/
+
+# Next.js
+.next/
+
+# Parcel
+.cache/
+
+# Svelte
+__sapper__/
+public/
+
+# Others
+*.swp

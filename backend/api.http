@@ -1,0 +1,31 @@
+### Get all notes
+GET http://localhost:5001/api/notes
+Content-Type: application/json
+
+###
+
+### Create a new note
+POST http://localhost:5001/api/notes
+Content-Type: application/json
+
+{
+  "title": "Test Note",
+  "content": "This is a test note."
+}
+
+###
+
+### Update a note (replace :id with a real note ID)
+PUT http://localhost:5001/api/notes/:id
+Content-Type: application/json
+
+{
+  "title": "Updated Note",
+  "content": "This note has been updated."
+}
+
+###
+
+### Delete a note (replace :id with a real note ID)
+DELETE http://localhost:5001/api/notes/:id
+Content-Type: application/json
