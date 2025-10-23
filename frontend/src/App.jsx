@@ -6,15 +6,14 @@ import toast, { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
-    <>
+    <div data-theme="synthwave">
       <Toaster />
-        <button onClick={() => toast.success("Congrats!")}>Click me</button>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/create" element={<CreatePage />} />
           <Route path="/note/:id" element={<NoteDetailPage />} />
         </Routes>
-    </>
+    </div>
   );
 };
 
