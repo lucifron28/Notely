@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
-    <div data-theme="synthwave">
+    <div data-theme="synthwave" className="relative h-full w-full">
       <Toaster />
         <Routes>
           <Route path="/" element={<HomePage />} />
