@@ -30,6 +30,17 @@ const HomePage = () => {
     fetchNotes();
   }, []);
 
+  const handleDelete = async (noteId) => {
+    try {
+      await axios.delete(`http://localhost:5001/api/notes/${noteId}`);
+      setNotes(notes.filter((note) => note._id !== noteId));
+      toast.success("Note deleted successfully!");
+    } catch (error) {
+      console.log(`Error deleting note: ${error}`);
+      toast.error("Failed to delete note.");
+    }
+  };
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -42,7 +53,7 @@ const HomePage = () => {
         <div className="container mx-auto py-20 px-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {notes.map((note) => (
-              <NoteCard key={note._id} note={note} />
+              <NoteCard key={note._id} note={note} handleDelete={handleDelete} />
             ))}
           </div>
         </div>
